@@ -167,41 +167,8 @@
 
 // ============ SMOOTH SCROLL FOR ANCHOR LINKS ============
 // ============ VIDEO SOUND TOGGLE ============
-(function initVideoSoundToggle() {
-    document.querySelectorAll('.video-sound-btn').forEach(btn => {
-        btn.addEventListener('click', function () {
-            const wrapper = this.closest('.video-wrapper');
-            const video = wrapper.querySelector('video');
-            const icon = this.querySelector('i');
+// YouTube embeds handle their own audio controls — no custom toggle needed.
 
-            if (video.muted) {
-                // Mute all other videos first
-                document.querySelectorAll('.video-wrapper video').forEach(v => {
-                    if (v !== video) {
-                        v.muted = true;
-                        const otherBtn = v.closest('.video-wrapper').querySelector('.video-sound-btn');
-                        if (otherBtn) {
-                            otherBtn.classList.remove('unmuted');
-                            otherBtn.querySelector('i').className = 'fas fa-volume-xmark';
-                            const otherSpan = otherBtn.querySelector('span');
-                            if (otherSpan) otherSpan.textContent = 'Tap to unmute';
-                        }
-                    }
-                });
-
-                video.muted = false;
-                icon.className = 'fas fa-volume-high';
-                this.classList.add('unmuted');
-            } else {
-                video.muted = true;
-                icon.className = 'fas fa-volume-xmark';
-                this.classList.remove('unmuted');
-                const span = this.querySelector('span');
-                if (span) span.textContent = 'Tap to unmute';
-            }
-        });
-    });
-})();
 
 
 // ============ SMOOTH SCROLL FOR ANCHOR LINKS ============
