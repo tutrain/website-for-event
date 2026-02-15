@@ -1174,6 +1174,148 @@ body {
 }
 
 /* ========================================
+   VIDEO CREATION WORK SECTION
+   ======================================== */
+.video-work-section {
+    background: var(--bg-dark);
+}
+
+.vw-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.vw-card {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 24px;
+    cursor: default;
+}
+
+.vw-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 36px rgba(10, 132, 255, 0.12);
+}
+
+.vw-icon-wrap {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.15rem;
+}
+
+.vw-icon-wrap.brand {
+    background: linear-gradient(135deg, rgba(0, 201, 167, 0.18), rgba(0, 201, 167, 0.05));
+    color: var(--accent-light);
+}
+
+.vw-icon-wrap.edu {
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.18), rgba(10, 132, 255, 0.05));
+    color: var(--primary-light);
+}
+
+.vw-icon-wrap.math {
+    background: linear-gradient(135deg, rgba(255, 159, 67, 0.18), rgba(255, 159, 67, 0.05));
+    color: #FFB74D;
+}
+
+.vw-icon-wrap.client {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.18), rgba(156, 39, 176, 0.05));
+    color: #CE93D8;
+}
+
+.vw-icon-wrap.ai {
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.18), rgba(0, 188, 212, 0.05));
+    color: #4DD0E1;
+}
+
+.vw-icon-wrap.physics {
+    background: linear-gradient(135deg, rgba(255, 235, 59, 0.18), rgba(255, 235, 59, 0.05));
+    color: #FFF176;
+}
+
+.vw-icon-wrap.promo {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.18), rgba(233, 30, 99, 0.05));
+    color: #F06292;
+}
+
+.vw-icon-wrap.platform {
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.18), rgba(0, 201, 167, 0.08));
+    color: var(--primary-light);
+}
+
+.vw-icon-wrap.science {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.18), rgba(76, 175, 80, 0.05));
+    color: #81C784;
+}
+
+.vw-icon-wrap.parent {
+    background: linear-gradient(135deg, rgba(255, 87, 34, 0.18), rgba(255, 87, 34, 0.05));
+    color: #FF8A65;
+}
+
+.vw-icon-wrap.boards {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.18), rgba(255, 215, 0, 0.05));
+    color: #FFD54F;
+}
+
+.vw-body h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.35;
+}
+
+.vw-body p {
+    color: var(--text-secondary);
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.vw-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.vw-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 50px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.vw-cta {
+    text-align: center;
+}
+
+.vw-cta-note {
+    display: block;
+    margin-top: 14px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.vw-cta-note i {
+    margin-right: 4px;
+}
+
+/* ========================================
    FORM SECTION
    ======================================== */
 .form-cta {
@@ -1355,6 +1497,10 @@ body {
     .showcase-videos {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .vw-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Mobile Landscape & Small Tablets */
@@ -1464,6 +1610,14 @@ body {
 
     .showcase-videos {
         grid-template-columns: 1fr;
+    }
+
+    .vw-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vw-card:hover {
+        transform: none;
     }
 
     .brochure-card {
@@ -1761,7 +1915,8 @@ body {
     .certifications,
     .video-card,
     .brochure-card,
-    .founder-card {
+    .founder-card,
+    .vw-card {
         opacity: 1;
         transform: none;
         transition: none;
@@ -1792,7 +1947,8 @@ body {
 .certifications,
 .video-card,
 .brochure-card,
-.founder-card {
+.founder-card,
+.vw-card {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -1811,7 +1967,8 @@ body {
 .certifications.visible,
 .video-card.visible,
 .brochure-card.visible,
-.founder-card.visible {
+.founder-card.visible,
+.vw-card.visible {
     opacity: 1;
     transform: translateY(0);
 }

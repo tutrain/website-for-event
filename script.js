@@ -92,7 +92,7 @@
     const revealElements = document.querySelectorAll(
         '.section-header, .about-card, .feature-item, .link-card, .links-group-title, ' +
         '.form-cta, .event-detail-card, .tutrain-hero-card, .tutrain-boards, .stats-row, .certifications, ' +
-        '.video-card, .brochure-card, .founder-card'
+        '.video-card, .brochure-card, .founder-card, .vw-card'
     );
 
     const observer = new IntersectionObserver((entries) => {
